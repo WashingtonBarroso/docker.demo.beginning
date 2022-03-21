@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  api.docker.demo:
+    image: ${DOCKER_REGISTRY-}apidockerdemo
+    build:
+      context: .
+      dockerfile: src\api.docker.demo\Dockerfile
+
+  front.docker.demo:
+    image: ${DOCKER_REGISTRY-}frontdockerdemo
+    build:
+      context: .
+      dockerfile: src\front.docker.demo\Dockerfile
+
